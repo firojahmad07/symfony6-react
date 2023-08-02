@@ -1,0 +1,15 @@
+parameters:
+    stride.menu.store.class: Spygar\Platform\Components\Menu\Store
+
+services:
+    _defaults:
+        public: true
+        autowire: true
+        autoconfigure: true
+    
+    stride.menu.store:
+        class: "%stride.menu.store.class%"
+        arguments:
+            - 'Store'
+        tags:
+            - { name: 'stride.menu.item' }

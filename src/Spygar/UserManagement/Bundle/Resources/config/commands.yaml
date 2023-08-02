@@ -1,0 +1,9 @@
+services:
+    stride.usermanagement.create_user:
+        public: true
+        class: Spygar\UserManagement\Component\Commands\CreateNewUserCommand
+        arguments:
+            - "@doctrine.orm.entity_manager"
+            - "@security.password_hasher"
+        tags:
+            - { name: console.command }

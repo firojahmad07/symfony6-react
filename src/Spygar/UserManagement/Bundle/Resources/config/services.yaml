@@ -1,0 +1,19 @@
+services:
+    _defaults:
+        public: true
+        autoconfigure: true
+        autowire: true
+        
+    stride.usermanagement.security.controller:
+        class: Spygar\UserManagement\Bundle\Controller\SecurityController
+
+    
+    spygar.usermanagement.user.controller:
+        class: Spygar\UserManagement\Bundle\Controller\UserController
+        arguments:
+            - "@spygar.usermanagement.user.repository"
+
+    spygar.usermanagement.role.controller:
+        class: Spygar\UserManagement\Bundle\Controller\RoleController
+        arguments:
+            - "@spygar.usermanagement.role.repository"

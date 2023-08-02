@@ -1,0 +1,13 @@
+services:
+    _defaults:
+        autowire: true  
+        autoconfigure: true
+        public: true
+
+    spygar.repository.provider:
+        class: Spygar\Platform\Bundle\SettingBundle\Providers\RepositoryProvider
+        public: true
+        arguments:
+            - "@spygar.locale.repository"
+            - "@spygar.currency.repository"
+            - "@spygar.attribute_group.repository"

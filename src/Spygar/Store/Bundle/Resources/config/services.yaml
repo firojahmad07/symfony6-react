@@ -1,0 +1,11 @@
+services:
+    _defaults:
+        public: true
+        autoconfigure: true
+        autowire: true
+        
+    spygar.store.controller:
+        class: Spygar\Store\Bundle\Controller\StoreController
+
+    spygar.store.user.controller:
+        class: Spygar\Store\Bundle\Controller\UserController

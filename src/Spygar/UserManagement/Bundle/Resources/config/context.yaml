@@ -1,0 +1,11 @@
+services:
+    _defaults:
+        public: true
+        autoconfigure: true
+        autowire: true
+        
+    spygar.usermanagement.user.context:
+        class: Spygar\UserManagement\Component\Context\UserContext
+        arguments:
+            - "@security.token_storage"
+            - "@spygar.usermanagement.user.repository"

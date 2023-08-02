@@ -1,0 +1,19 @@
+spygar_ui_index:
+    resource: "@UIBundle/Resources/config/routes.yaml"
+    prefix: /
+
+# spygar_setting_index:
+#     resource: "@SettingBundle/Resources/config/routes.yaml"
+#     prefix: /spygar/setting
+
+# spygar_user_management_index:
+#     resource: "@UserManagementBundle/Resources/config/routes.yaml"
+#     prefix: /user
+
+# spygar_product_index:
+#     resource: "@ProductBundle/Resources/config/routes.yaml"
+#     prefix: /spygar/rest
+
+# spygar_store_index:
+#     resource: "@StoreBundle/Resources/config/routes.yaml"
+#     prefix: /

@@ -1,0 +1,3 @@
+spygar_admin_dashboard:
+    path: /
+    defaults: { _controller: spygar.ui.controller::index }

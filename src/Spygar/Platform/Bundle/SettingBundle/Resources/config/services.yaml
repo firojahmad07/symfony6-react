@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autowire: true  
+        autoconfigure: true
+        public: true
+
+    # spygar.ui.controller:
+    #     class: Spygar\Platform\Bundle\UiBundle\Controller\UiController
+        # tags: [controller.service_arguments]

@@ -1,0 +1,16 @@
+
+services:
+    _defaults:
+        public: true
+        autoconfigure: true
+        autowire: true
+        
+    spygar.usermanagement.user.repository:
+        class: Spygar\UserManagement\Bundle\Repository\UserRepository
+        arguments:
+            - "@doctrine.orm.entity_manager"
+
+    spygar.usermanagement.role.repository:
+        class: Spygar\UserManagement\Bundle\Repository\RoleRepository
+        arguments:
+            - "@doctrine.orm.entity_manager"

@@ -1,0 +1,46 @@
+# login path
+user_login:
+    path: /login
+    controller: stride.usermanagement.security.controller::userLogin
+
+forgot_password:
+    path: /forgot/password
+    controller: stride.usermanagement.security.controller::forgotPassword
+  
+user_logout:
+    path: /logout
+    controller: stride.usermanagement.security.controller::userLogout
+
+# user routes
+spygar_user_create_or_update:
+    path: /system/user/create
+    controller: spygar.usermanagement.user.controller::createOrUpdateUser
+
+spygar_user_list:
+    path: /system/user/{page}/list/{limit}
+    controller: spygar.usermanagement.user.controller::list
+
+spygar_user_details:
+    path: /system/user/{id}/details
+    controller: spygar.usermanagement.user.controller::details
+
+spygar_user_delete:
+    path: /system/user/delete
+    controller: spygar.usermanagement.user.controller::deleteUser
+
+# roles routes
+spygar_role_list:
+    path: /system/role/{page}/list/{limit}
+    controller: spygar.usermanagement.role.controller::list
+
+spygar_role_details:
+    path: /system/role/{roleId}/details
+    controller: spygar.usermanagement.role.controller::details
+
+spygar_role_create:
+    path: /system/role/create
+    controller: spygar.usermanagement.role.controller::createOrUpdate
+
+spygar_role_delete:
+    path: /system/role/delete
+    controller: spygar.usermanagement.role.controller::delete

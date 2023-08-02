@@ -1,0 +1,11 @@
+services:
+    _defaults:
+        autowire: true  
+        autoconfigure: true
+        public: true
+
+    spygar.rest.product.controller:
+        public: true
+        class: Spygar\Platform\Bundle\ProductBundle\Controller\ProductController
+        arguments:
+            - "@spygar.product.repository"

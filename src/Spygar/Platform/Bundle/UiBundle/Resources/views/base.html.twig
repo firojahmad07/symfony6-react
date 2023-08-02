@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+    </head>
+    <body class="sidebar-enable vertical-collpsed">
+        {% block body %}
+        <div id="app_container"></div>
+        <script src="{{ asset("./dist/bundle.min.js") }}"></script>
+        {% endblock %}
+    </body>
+</html>

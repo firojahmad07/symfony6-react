@@ -1,0 +1,13 @@
+# Product related routes
+spygar_setting_rest_internal_products:
+    path: pim/{page}/products/{limit}
+    defaults: { _controller: spygar.rest.product.controller::list }
+
+spygar_setting_rest_internal_create_product:
+    path: pim/product/create
+    defaults: { _controller: spygar.rest.product.controller::create }
+
+spygar_setting_rest_internal_details:
+    path: pim/{productId}/product
+    defaults: { _controller: spygar.rest.product.controller::details }
+    
