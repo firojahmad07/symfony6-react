@@ -10,8 +10,8 @@
       href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700"
     />
     <title>Metronic Theme | Keenthemes</title>
-    <link rel="shortcut icon" href="%PUBLIC_URL%/media/logos/favicon.ico" />
-    <link rel="stylesheet" id="layout-styles-anchor" href="%PUBLIC_URL%/splash-screen.css" />
+    <link rel="shortcut icon" href="{{ asset('./dist/bundle.js') }}/media/logos/favicon.ico" />
+    <link rel="stylesheet" id="layout-styles-anchor" href="{{ asset('./bundles/ui/_metronic/assets/css/splash-screen.css') }}/" />
   </head>
 
   <body id="kt_body" class="page-loading">
@@ -37,12 +37,12 @@
     <!--begin::Loading markup-->
     <div id="splash-screen" class="splash-screen">
       <img
-        src="%PUBLIC_URL%/media/logos/default-dark.svg"
+        src="{{ asset('./dist/bundle.js') }}/media/logos/default-dark.svg"
         class="dark-logo"
         alt="Metronic dark logo"
       />
       <img
-        src="%PUBLIC_URL%/media/logos/default.svg"
+        src="{{ asset('./dist/bundle.js') }}/media/logos/default.svg"
         class="light-logo"
         alt="Metronic light logo"
       />
@@ -51,5 +51,7 @@
     <!--end::Loading markup-->
 
     <div id="root-modals"></div>
+    <script src="{{ asset('./dist/bundle.js') }}"></script>
+
   </body>
 </html>

@@ -60,7 +60,7 @@ const TabsBase: FC<Props> = ({link}) => {
       {/* begin::Footer */}
       <div className='flex-column-auto pt-10 px-5' id='kt_aside_secondary_footer'>
         <a
-          href={process.env.REACT_APP_PREVIEW_DOCS_URL + '/docs/changelog'}
+          href={'/docs/changelog'}
           target='_blank'
           className='btn btn-bg-light btn-color-gray-600 btn-flex btn-active-color-primary flex-center w-100'
           data-bs-toggle='tooltip'

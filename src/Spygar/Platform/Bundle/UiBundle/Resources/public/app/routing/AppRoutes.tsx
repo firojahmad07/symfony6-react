@@ -17,12 +17,11 @@ import {App} from '../App'
  *
  * @see https://facebook.github.io/create-react-app/docs/using-the-public-folder
  */
-const {PUBLIC_URL} = process.env
 
 const AppRoutes: FC = () => {
   const {currentUser} = useAuth()
   return (
-    <HashRouter basename={PUBLIC_URL}>
+    <HashRouter>
       <Routes>
         <Route element={<App />}>
           <Route path='error/*' element={<ErrorsPage />} />
