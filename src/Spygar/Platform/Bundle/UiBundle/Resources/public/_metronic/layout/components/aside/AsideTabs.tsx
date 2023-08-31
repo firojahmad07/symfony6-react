@@ -1,7 +1,5 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/anchor-has-content */
 import clsx from 'clsx'
-import {Dispatch, FC, SetStateAction} from 'react'
+import React, {Dispatch, FC, SetStateAction} from 'react'
 import {KTIcon} from '../../../helpers'
 
 const tabs: ReadonlyArray<{link: string; icon: string; tooltip: string}> = [
@@ -66,6 +64,7 @@ const AsideTabs: FC<Props> = ({link, setLink}) => (
             onClick={() => setLink(t.link)}
           >
             <KTIcon iconName={t.icon} className='fs-2x' />
+            {/* <p>{t.icon}</p> */}
           </a>
           {/* end::Nav link */}
         </li>

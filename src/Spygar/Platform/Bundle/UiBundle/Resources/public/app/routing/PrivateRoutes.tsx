@@ -1,4 +1,4 @@
-import {FC, lazy, Suspense} from 'react'
+import React, {FC, lazy, Suspense} from 'react'
 import {Navigate, Route, Routes} from 'react-router-dom'
 import {MasterLayout} from '../../_metronic/layout/MasterLayout'
 import TopBarProgress from 'react-topbar-progress-indicator'

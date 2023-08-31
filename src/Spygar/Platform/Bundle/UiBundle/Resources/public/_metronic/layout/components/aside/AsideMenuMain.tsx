@@ -2,6 +2,7 @@
 import {useIntl} from 'react-intl'
 import {AsideMenuItemWithSub} from './AsideMenuItemWithSub'
 import {AsideMenuItem} from './AsideMenuItem'
+import React from 'react'
 
 export function AsideMenuMain() {
   const intl = useIntl()

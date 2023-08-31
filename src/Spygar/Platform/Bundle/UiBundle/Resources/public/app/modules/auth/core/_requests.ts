@@ -1,7 +1,7 @@
 import axios from 'axios'
 import {AuthModel, UserModel} from './_models'
 
-const API_URL = 'api'
+const API_URL = 'https://preview.keenthemes.com/metronic8/laravel/api'
 
 export const GET_USER_BY_ACCESSTOKEN_URL = `${API_URL}/verify_token`
 export const LOGIN_URL = `${API_URL}/login`

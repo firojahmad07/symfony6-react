@@ -1,4 +1,4 @@
-import {FC} from 'react'
+import React, {FC} from 'react'
 import {useLang} from './Metronici18n'
 import {IntlProvider} from 'react-intl'
 import '@formatjs/intl-relativetimeformat/polyfill'
