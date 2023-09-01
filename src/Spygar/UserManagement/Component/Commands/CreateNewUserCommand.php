@@ -1,36 +1,35 @@
 <?php
 namespace Spygar\UserManagement\Component\Commands;
 
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasher;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Spygar\UserManagement\Bundle\Entity\Role;
 use Spygar\UserManagement\Bundle\Entity\User;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Doctrine\ORM\EntityManager;
+
 /**
  * Create Default admin user
  * 
  * @author Firoj Ahmad <firojahmad07@gmail.com>
  */
-
+#[AsCommand(name: 'spygar:create:user')]
 class CreateNewUserCommand extends Command
 {
     /** @var EntityManager $entityManager */
     protected $entityManager;
 
-    /** @var UserPasswordEncoderInterface $passwordEncoder */
+    /** @var UserPasswordHasher $passwordEncoder */
     protected $passwordEncoder;
-
-    protected static $defaultName = 'spygar:create:user';
-
     /**
      * @param EntityManager $entityManager
-     * @param UserPasswordEncoderInterface $passwordEncoder
+     * @param UserPasswordHasher $passwordEncoder
      */
     public function __construct(
         EntityManager $entityManager,
-        UserPasswordEncoderInterface $passwordEncoder
+        UserPasswordHasher $passwordEncoder
         )
     {
         $this->entityManager = $entityManager;
@@ -82,7 +81,7 @@ class CreateNewUserCommand extends Command
         {
             $userExists   = $userRepository->findOneBy(['username' => $user['username']]);
             $userInstance = !empty($userExists) ? $userExists : new User;
-            $password     = $this->passwordEncoder->encodePassword($userInstance, $user['password']);
+            $password     = $this->passwordEncoder->hashPassword($userInstance, $user['password']);
             
             $userInstance->setFirstName($user['first_name']);
             $userInstance->setLastName($user['last_name']);

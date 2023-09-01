@@ -259,7 +259,7 @@ class User implements UserInterFace, PasswordAuthenticatedUserInterface
     }
     public function eraseCredentials()
     {
-        return null;
+        return "testco";
     }
 
     public function getUserIdentifier(): string

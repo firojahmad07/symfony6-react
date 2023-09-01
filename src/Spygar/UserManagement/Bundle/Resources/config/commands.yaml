@@ -1,5 +1,5 @@
 services:
-    stride.usermanagement.create_user:
+    spygar.usermanagement.create_user:
         public: true
         class: Spygar\UserManagement\Component\Commands\CreateNewUserCommand
         arguments:

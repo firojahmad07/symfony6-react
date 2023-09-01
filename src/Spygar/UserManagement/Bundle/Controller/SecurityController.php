@@ -3,6 +3,8 @@ namespace Spygar\UserManagement\Bundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Spygar\UserManagement\Bundle\Entity\User;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 /**
@@ -10,20 +12,18 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
  */
 class SecurityController extends AbstractController
 {
-    /**
-     * @param Symfony\Component\HttpFoundation\Request                              $request
-     * @param Symfony\Component\Security\Http\Authentication\AuthenticationUtils    $authenticationUtils
-     */
-    
-    public function userLogin(Request $request, AuthenticationUtils $authenticationUtils)
+    public function userLogin(?User $user)
     {
-        $error = $authenticationUtils->getLastAuthenticationError();
-        // last username entered by the user
-        $lastUsername = $authenticationUtils->getLastUsername();
-        
-        return $this->render('@UserManagement/login.html.twig', [
-            'error' => $error,
-            'username' => $lastUsername
+        if (null === $user) {
+             return $this->json([
+                 'message' => 'missing credentials',
+             ], Response::HTTP_UNAUTHORIZED);
+         }
+         $token = "as5d5f4as5df4a56sdf46as5d4f6a5sd4f6qrqwer4zcvasd6f54qwr4";
+         
+         return $this->json([
+            'user'  => $user->getUserIdentifier(),
+            'token' => $token,
         ]);
     }
     /**

@@ -3,27 +3,37 @@
 namespace Spygar\UserManagement\Bundle\Repository;
 
 use Spygar\UserManagement\Bundle\Entity\User;
-use Doctrine\ORM\EntityManagerInterface;
-use Doctrine\ORM\EntityRepository;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
+use Doctrine\Persistence\ManagerRegistry;
 /**
  * @method User|null find($id, $lockMode = null, $lockVersion = null)
  * @method User|null findOneBy(array $criteria, array $orderBy = null)
  * @method User[]    findAll()
  * @method User[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class UserRepository extends \Doctrine\ORM\EntityRepository
+class UserRepository extends ServiceEntityRepository implements UserLoaderInterface
 {
-    /** @var EntityManagerInterface */
-    private $entityManager;
-
-    public function __construct(EntityManagerInterface $entityManager)
-    {
-        $this->entityManager = $entityManager;
-        $classMeta           = $this->entityManager->getClassMetadata(User::class);
-
-        parent::__construct($this->entityManager, $classMeta);
+    public function __construct(ManagerRegistry $managerRegistry)
+    {      
+        parent::__construct($managerRegistry, User::class);
     }
 
+    public function loadUserByIdentifier(string $usernameOrEmail): ?User
+    {
+        $entityManager = $this->getEntityManager();
+
+        return $entityManager->createQuery(
+                'SELECT u
+                FROM Spygar\UserManagement\Bundle\Entity\User u
+                WHERE u.username = :query
+                OR u.email = :query'
+            )
+            ->setParameter('query', $usernameOrEmail)
+            ->getOneOrNullResult();
+    }
+
+    
     /**
      *  Get user list with page, limit
      *  @return []

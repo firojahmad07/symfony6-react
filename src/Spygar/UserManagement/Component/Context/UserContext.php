@@ -22,12 +22,12 @@ class UserContext
     {
         $this->tokentStorage  = $tokentStorage;
         $this->userRepository = $userRepository;
-        $this->getCurrentUser();
+        $this->userInfo = $this->tokentStorage->getToken()->getUser();
     }
     /** Return Current Logged in User Details */
     public function getCurrentUser() 
     {
-        $this->userInfo = $this->tokentStorage->getToken()->getUser();
+       return $this->userInfo;
     }
 
     /** Get user catalog locale */
@@ -42,7 +42,7 @@ class UserContext
     }
 
     /** User all data */
-    public function getUser() 
+    public function getUserDetails() 
     {
         return !empty($this->userInfo) ? $this->userRepository->getUserDetails($this->userInfo->getId()) : [];        
     }

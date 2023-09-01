@@ -3,7 +3,8 @@
 namespace Spygar\UserManagement\Bundle\Repository;
 
 use Spygar\UserManagement\Bundle\Entity\Role;
-use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**
  * @method Role|null find($id, $lockMode = null, $lockVersion = null)
@@ -11,17 +12,15 @@ use Doctrine\ORM\EntityManagerInterface;
  * @method Role[]    findAll()
  * @method Role[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class RoleRepository extends \Doctrine\ORM\EntityRepository
+class RoleRepository extends ServiceEntityRepository
 {
-    /** @var EntityManagerInterface */
-    protected $entityManager;
+    /** @var ManagerRegistry */
+    private $managerRegistry;
 
-    public function __construct(EntityManagerInterface $entityManager)
+    public function __construct(ManagerRegistry $managerRegistry)
     {
-        $this->entityManager = $entityManager;
-        $classMeta           = $this->entityManager->getClassMetadata(Role::class);
-
-        parent::__construct($this->entityManager, $classMeta);
+        $this->managerRegistry = $managerRegistry;        
+        parent::__construct($this->managerRegistry, Role::class);
     }
 
     /**

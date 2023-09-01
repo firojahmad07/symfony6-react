@@ -1,15 +1,16 @@
 # login path
 user_login:
     path: /login
-    controller: stride.usermanagement.security.controller::userLogin
+    controller: spygar.usermanagement.security.controller::userLogin
+    methods: ['POST']
 
 forgot_password:
     path: /forgot/password
-    controller: stride.usermanagement.security.controller::forgotPassword
+    controller: spygar.usermanagement.security.controller::forgotPassword
   
 user_logout:
     path: /logout
-    controller: stride.usermanagement.security.controller::userLogout
+    controller: spygar.usermanagement.security.controller::userLogout
 
 # user routes
 spygar_user_create_or_update:

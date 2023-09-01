@@ -14,8 +14,9 @@ class UserManagementExtension extends Extension
         $fileLoader = new YamlFileLoader($container,
             new FileLocator(__DIR__ . "/../Resources/config"));
 
-        $fileLoader->load('services.yaml');
+        $fileLoader->load('controllers.yaml');
         $fileLoader->load('repositories.yaml');
+        $fileLoader->load('services.yaml');
         $fileLoader->load('context.yaml');
         $fileLoader->load('commands.yaml');
     }
