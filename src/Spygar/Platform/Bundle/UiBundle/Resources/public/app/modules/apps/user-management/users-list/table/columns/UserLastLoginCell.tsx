@@ -1,4 +1,4 @@
-import {FC} from 'react'
+import React, {FC} from 'react'
 
 type Props = {
   last_login?: string

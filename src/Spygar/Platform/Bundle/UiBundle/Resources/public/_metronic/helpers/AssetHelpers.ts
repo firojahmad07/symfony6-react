@@ -1,1 +1,1 @@
-export const toAbsoluteUrl = (pathname: string) => '/' + pathname
+export const toAbsoluteUrl = (pathname: string) => `bundles/ui` + pathname
