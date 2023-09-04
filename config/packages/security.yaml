@@ -5,9 +5,8 @@ security:
     # https://symfony.com/doc/current/security.html#loading-the-user-the-user-provider
     # 
     providers:
-        spygar_user_provider:
-            entity:
-                class: Spygar\UserManagement\Bundle\Entity\User
+        db_user_provider:
+            id: spygar_user_provider
 
     firewalls:
         dev:
@@ -15,7 +14,8 @@ security:
             security: false
         main:
             lazy: true
-            provider: spygar_user_provider
+            provider: db_user_provider
+            stateless: false
             json_login:
                 check_path: user_login
 

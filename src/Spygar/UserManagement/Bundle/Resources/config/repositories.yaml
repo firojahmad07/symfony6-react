@@ -7,10 +7,10 @@ services:
         
     spygar.usermanagement.user.repository:
         class: Spygar\UserManagement\Bundle\Repository\UserRepository
-        # factory: ['@doctrine.orm.default_entity_manager', getRepository]
         arguments:
-            - "@doctrine"
+            - "@doctrine.orm.entity_manager"
+            
     spygar.usermanagement.role.repository:
         class: Spygar\UserManagement\Bundle\Repository\RoleRepository
         arguments:
-            - "@doctrine"
+            - "@doctrine.orm.entity_manager"

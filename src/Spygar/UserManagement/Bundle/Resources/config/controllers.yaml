@@ -6,7 +6,8 @@ services:
         
     spygar.usermanagement.security.controller:
         class: Spygar\UserManagement\Bundle\Controller\SecurityController
-
+        arguments:
+            - "@spygar.usermanagement.user.repository"            
     
     spygar.usermanagement.user.controller:
         class: Spygar\UserManagement\Bundle\Controller\UserController

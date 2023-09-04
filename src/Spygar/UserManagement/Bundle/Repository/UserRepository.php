@@ -3,37 +3,57 @@
 namespace Spygar\UserManagement\Bundle\Repository;
 
 use Spygar\UserManagement\Bundle\Entity\User;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
-use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\EntityRepository;
+
 /**
  * @method User|null find($id, $lockMode = null, $lockVersion = null)
  * @method User|null findOneBy(array $criteria, array $orderBy = null)
  * @method User[]    findAll()
  * @method User[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class UserRepository extends ServiceEntityRepository implements UserLoaderInterface
+class UserRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function __construct(ManagerRegistry $managerRegistry)
-    {      
-        parent::__construct($managerRegistry, User::class);
+    /** @var EntityManagerInterface */
+    private $entityManager;
+
+    public function __construct(EntityManagerInterface $entityManager)
+    {   
+        $this->entityManager = $entityManager;
+        $classMeta           = $this->entityManager->getClassMetadata(User::class); 
+        parent::__construct($this->entityManager, $classMeta);
     }
 
-    public function loadUserByIdentifier(string $usernameOrEmail): ?User
+    /**
+     * Load user by identifier like usernamer or email
+     * @return User
+    */
+    public function loadUserByIdentifier(string $identifier) 
     {
-        $entityManager = $this->getEntityManager();
+        return $this->entityManager->createQuery(
+            'SELECT u
+            FROM Spygar\UserManagement\Bundle\Entity\User u
+            WHERE u.username = :query
+            OR u.email = :query'
+        )
+        ->setParameter('query', $identifier)
+        ->getOneOrNullResult();
+    }
+    
+    /** Genereate Acess Token */
+    public function generateAccessToken(User $user) 
+    {
+        $accessToken = $this->generateToken();
+        $user->setAccessToken($accessToken);
+        $this->saveUser($user);
 
-        return $entityManager->createQuery(
-                'SELECT u
-                FROM Spygar\UserManagement\Bundle\Entity\User u
-                WHERE u.username = :query
-                OR u.email = :query'
-            )
-            ->setParameter('query', $usernameOrEmail)
-            ->getOneOrNullResult();
+        return $accessToken;
     }
 
-    
+    public function generateToken()
+    {
+        return rtrim(strtr(base64_encode(random_bytes(32)), '+/', '-_'), '=');
+    }
     /**
      *  Get user list with page, limit
      *  @return []

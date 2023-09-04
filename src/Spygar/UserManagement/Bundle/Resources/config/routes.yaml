@@ -4,6 +4,11 @@ user_login:
     controller: spygar.usermanagement.security.controller::userLogin
     methods: ['POST']
 
+user_verify_token:
+    path: /verify_token
+    controller: spygar.usermanagement.security.controller::verifyToken
+    methods: ['POST']
+
 forgot_password:
     path: /forgot/password
     controller: spygar.usermanagement.security.controller::forgotPassword

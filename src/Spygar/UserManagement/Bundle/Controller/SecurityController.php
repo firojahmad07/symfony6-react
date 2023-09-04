@@ -2,28 +2,47 @@
 namespace Spygar\UserManagement\Bundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Security\Http\Attribute\CurrentUser;
+use Spygar\UserManagement\Bundle\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Spygar\UserManagement\Bundle\Entity\User;
-use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 /**
  * initiate Security Controller to manange login, logout and forget password of users. 
  */
 class SecurityController extends AbstractController
 {
-    public function userLogin(?User $user)
+    /** @var UserRepository */
+    private $userRepository;
+
+    public function __construct(UserRepository $userRepository) 
+    {
+        $this->userRepository = $userRepository;
+    }
+
+    public function userLogin(#[CurrentUser]?User $user)
     {
         if (null === $user) {
              return $this->json([
-                 'message' => 'missing credentials',
+                 'message' => 'Invalide credentials',
              ], Response::HTTP_UNAUTHORIZED);
          }
-         $token = "as5d5f4as5df4a56sdf46as5d4f6a5sd4f6qrqwer4zcvasd6f54qwr4";
+
+         $token = $this->userRepository->generateAccessToken($user);
          
          return $this->json([
             'user'  => $user->getUserIdentifier(),
-            'token' => $token,
+            'api_token' => $token,
+        ]);
+    }
+
+    /** Verify login token */
+    public function verifyToken(#[CurrentUser]?User $user)
+    {
+        return $this->json([
+            'user'  => $user->getUserIdentifier(),
+            'api_token' => $user->getAccessToken(),
         ]);
     }
     /**
