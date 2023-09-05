@@ -1,4 +1,4 @@
-import {FC, createContext, useContext, useState, useEffect} from 'react'
+import React, {FC, createContext, useContext, useState, useEffect} from 'react'
 import {DefaultLayoutConfig} from './DefaultLayoutConfig'
 import {
   getEmptyCssClasses,

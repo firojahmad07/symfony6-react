@@ -2,37 +2,50 @@ import clsx from 'clsx'
 import React, {Dispatch, FC, SetStateAction} from 'react'
 import {KTIcon} from '../../../helpers'
 
-const tabs: ReadonlyArray<{link: string; icon: string; tooltip: string}> = [
+const tabMenu = {}
+const tabs: ReadonlyArray<{link: string; icon: string; route: string, title:string, tooltip: string}> = [
   {
-    link: 'projects',
+    link: 'dashboard',
     icon: 'element-11',
-    tooltip: 'Projects',
+    route: 'dashboard',
+    title: 'Dashboard',
+    tooltip: 'Dashboard',
   },
   {
-    link: 'menu',
+    link: 'sales',
     icon: 'briefcase',
-    tooltip: 'Menu',
+    route: 'sales',
+    title: 'Sales',
+    tooltip: 'Sales',
   },
   {
-    link: 'subscription',
+    link: 'catalog',
     icon: 'chart-simple',
-    tooltip: 'Subscription',
+    route: 'catalog',
+    title: 'catalog',
+    tooltip: 'Catalog',
   },
   {
-    link: 'tasks',
+    link: 'cms',
     icon: 'shield-tick',
-    tooltip: 'Tasks',
+    route: 'cms',
+    title: 'CMS',
+    tooltip: 'CMS',
   },
   {
-    link: 'notifications',
-    icon: 'abstract-26',
-    tooltip: 'Notifications',
+    link: 'settings',
+    icon: 'shield-tick',
+    route: 'settings',
+    title: 'Settings',
+    tooltip: 'Settings',
   },
   {
-    link: 'authors',
-    icon: 'add-files',
-    tooltip: 'Authors',
-  },
+    link: 'system',
+    icon: 'shield-tick',
+    route: 'system',
+    title: 'System',
+    tooltip: 'System',
+  }
 ]
 
 type Props = {
@@ -64,7 +77,6 @@ const AsideTabs: FC<Props> = ({link, setLink}) => (
             onClick={() => setLink(t.link)}
           >
             <KTIcon iconName={t.icon} className='fs-2x' />
-            {/* <p>{t.icon}</p> */}
           </a>
           {/* end::Nav link */}
         </li>

@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import React, {useEffect} from 'react'
 import {useIntl} from 'react-intl'
 import {PageLink, PageTitle} from '../../../_metronic/layout/core'
 import {

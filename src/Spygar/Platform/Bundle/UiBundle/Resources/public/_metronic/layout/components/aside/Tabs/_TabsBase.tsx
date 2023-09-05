@@ -3,7 +3,12 @@ import React, {FC} from 'react'
 import {AuthorsTab} from './AuthorsTab'
 import {MenuTab} from './MenuTab'
 import {NotificationsTab} from './NotificationsTab'
-import {ProjectsTab} from './ProjectsTab'
+import {IndexTab} from './IndexTab'
+import {SalesTab} from './SalesTab'
+import {CatalogTab} from './CatalogTab'
+import {CMSTab} from './CMSTab'
+import {SystemTab} from './SystemTab'
+import {SettingsTab} from './SettingsTab'
 import {SubscriptionsTab} from './SubscriptionsTab'
 import {TasksTab} from './TasksTab'
 
@@ -13,20 +18,20 @@ type Props = {
 
 const SelectedTab: FC<Props> = ({link}) => {
   switch (link) {
-    case 'projects':
-      return <ProjectsTab />
-    case 'menu':
-      return <MenuTab />
-    case 'subscription':
-      return <SubscriptionsTab />
-    case 'tasks':
-      return <TasksTab />
-    case 'notifications':
-      return <NotificationsTab />
-    case 'authors':
-      return <AuthorsTab />
+    case 'dashboard':
+      return <IndexTab />
+    case 'sales':
+      return <SalesTab />
+    case 'catalog':
+      return <CatalogTab />
+    case 'cms':
+      return <CMSTab />
+    case 'settings':
+      return <SettingsTab />
+    case 'system':
+      return <SystemTab />  
     default:
-      return <ProjectsTab />
+      return <IndexTab />
   }
 }
 
