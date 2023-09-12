@@ -30,7 +30,7 @@ const Private: FC = () => {
               data-kt-scroll='true'
               data-kt-scroll-activate='{default: false, lg: true}'
               data-kt-scroll-max-height='auto'
-              data-kt-scroll-dependencies='#kt_header, #kt_toolbar, #kt_footer, #kt_chat_contacts_header'
+              data-kt-scroll-dependencies='#kt_header, #kt_toolbar, #kt_chat_contacts_header'
               data-kt-scroll-wrappers='#kt_content, #kt_chat_contacts_body'
               data-kt-scroll-offset='0px'
             >

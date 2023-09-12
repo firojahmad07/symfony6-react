@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react'
 import {Outlet, useLocation} from 'react-router-dom'
 import {AsideDefault} from './components/aside/AsideDefault'
-import {Footer} from './components/Footer'
 import {HeaderWrapper} from './components/header/HeaderWrapper'
 import {ScrollTop} from './components/ScrollTop'
 import {Content} from './components/Content'
@@ -41,7 +40,6 @@ const MasterLayout = () => {
                 </Content>
               </div>
               {/* end::Content */}
-              <Footer />
             </div>
             {/* end::Wrapper */}
           </div>
