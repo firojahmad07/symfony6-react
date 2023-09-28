@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, {useState} from 'react'
-import {KTIcon, toAbsoluteUrl} from '../../../../../../_metronic/helpers'
+import {KTIcon, toAbsoluteUrl} from '../../../../../../pim/helpers'
 import {connectedAccounts, IConnectedAccounts} from '../SettingsModel'
 
 const ConnectedAccounts: React.FC = () => {

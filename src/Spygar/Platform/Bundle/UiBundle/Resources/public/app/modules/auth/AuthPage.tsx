@@ -4,7 +4,7 @@ import {Outlet, Route, Routes} from 'react-router-dom'
 import {Registration} from './components/Registration'
 import {ForgotPassword} from './components/ForgotPassword'
 import {Login} from './components/Login'
-import {toAbsoluteUrl} from '../../../_metronic/helpers'
+import {toAbsoluteUrl} from '../../../pim/helpers'
 
 const AuthLayout = () => {
   useEffect(() => {

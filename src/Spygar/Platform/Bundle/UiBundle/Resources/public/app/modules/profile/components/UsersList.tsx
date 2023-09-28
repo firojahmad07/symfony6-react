@@ -1,6 +1,6 @@
 import {FC} from 'react'
 import {IconUserModel} from '../ProfileModels'
-import {toAbsoluteUrl} from '../../../../_metronic/helpers'
+import {toAbsoluteUrl} from '../../../../pim/helpers'
 import {OverlayTrigger, Tooltip} from 'react-bootstrap'
 
 type Props = {

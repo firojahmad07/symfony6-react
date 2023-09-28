@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": false,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
   },
-  "include": ["public/bundles/"]
+  "include": ["public/bundles/", "public/bundles/**/*.ts", "public/bundles/**/*.tsx", "public/bundles/**/*.d.ts"]
 }

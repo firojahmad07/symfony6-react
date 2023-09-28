@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import {KTIcon} from '../../../../_metronic/helpers'
-import {Card4} from '../../../../_metronic/partials/content/cards/Card4'
+import {KTIcon} from '../../../../pim/helpers'
+import {Card4} from '../../../../pim/partials/content/cards/Card4'
 
 export function Documents() {
   return (

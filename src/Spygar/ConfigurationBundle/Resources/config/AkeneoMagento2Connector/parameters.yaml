@@ -1,0 +1,44 @@
+parameters:
+    spygar_akeneo_magento2_credentials:
+        credentials:            
+            -
+                url: DashboardIcon.tsx
+                api: asdf4asdf654a
+                access_token: sfa4sdf564asdf65
+                label:
+                    en_USA: Demo Credentials
+                    fr_FR: Demo Credentials
+                stores:
+                    -
+                        storeId: 14
+                        storeName: "France"
+                        storeLocale: 'fr_FR' # if want to specify  'ecommerce-en_US' then consider ecommerce channel FR locale for this store.
+                        storeCurrency: 'USD'
+                    -
+                        storeId: 14
+                        storeName: "France"
+                        storeLocale: 'fr_FR' # if want to specify  'ecommerce-en_US' then consider ecommerce channel FR locale for this store.
+                        storeCurrency: 'USD'
+                        label:
+                            en_USA: Demo Credentials
+                    -
+                        storeId: 14
+                        storeName: "France"
+                        storeLocale: 'fr_FR' # if want to specify  'ecommerce-en_US' then consider ecommerce channel FR locale for this store.
+                        storeCurrency: 'USD'
+                        label:
+                            en_USA: Demo Credentials
+            -
+                url: df5a4sd64a
+                api: asdf5a4sd6f54ads
+                access_token:
+                label:
+                    en_USA: Demo Credentials
+                stores: []
+        attributeMappings:
+            sku:
+                product: product_sku
+                variant: ~ # leave it if you want to use product(product_sku) mapping
+            name:
+                product: product_name
+                variant: ~ # leave it if you want to use product(product_sku) mapping

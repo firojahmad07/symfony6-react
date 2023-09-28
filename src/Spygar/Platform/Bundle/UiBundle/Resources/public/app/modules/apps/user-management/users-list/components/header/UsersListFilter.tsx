@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
-import {MenuComponent} from '../../../../../../../_metronic/assets/ts/components'
-import {initialQueryState, KTIcon} from '../../../../../../../_metronic/helpers'
+import {MenuComponent} from '../../../../../../../pim/assets/ts/components'
+import {initialQueryState, KTIcon} from '../../../../../../../pim/helpers'
 import {useQueryRequest} from '../../core/QueryRequestProvider'
 import {useQueryResponse} from '../../core/QueryResponseProvider'
 

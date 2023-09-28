@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, {FC} from 'react'
-import {KTIcon, toAbsoluteUrl} from '../../../../../_metronic/helpers'
-import {ChatInner, Dropdown1} from '../../../../../_metronic/partials'
+import {KTIcon, toAbsoluteUrl} from '../../../../../pim/helpers'
+import {ChatInner, Dropdown1} from '../../../../../pim/partials'
 
 const Private: FC = () => {
   return (

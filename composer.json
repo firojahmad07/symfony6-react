@@ -19,6 +19,7 @@
         "symfony/runtime": "6.3.*",
         "symfony/security-bundle": "6.3.*",
         "symfony/twig-bundle": "6.3.*",
+        "spygar/akeneo-magento2-connector": "dev-1.0.7",
         "symfony/yaml": "6.3.*"
     },
     "config": {
@@ -61,6 +62,12 @@
             "@auto-scripts"
         ]
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/firojahmad07/spygar-akeneo-magento2-connector.git"
+        }
+    ],
     "conflict": {
         "symfony/symfony": "*"
     },

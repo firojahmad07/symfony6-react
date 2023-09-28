@@ -8,5 +8,6 @@ return [
     Symfony\Bundle\TwigBundle\TwigBundle::class => ['all' => true],
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
     Spygar\Platform\Bundle\UiBundle\UIBundle::class => ['all' => true],
-    Spygar\UserManagement\Bundle\UserManagementBundle::class => ['all' => true]
+    Spygar\UserManagement\Bundle\UserManagementBundle::class => ['all' => true],
+    Spygar\ConfigurationBundle\SpygarConfigurationBundle::class => ['all' => true]
 ];

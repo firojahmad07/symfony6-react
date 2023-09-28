@@ -1,6 +1,6 @@
 import {FC} from 'react'
 import {Link} from 'react-router-dom'
-import {toAbsoluteUrl} from '../../../../_metronic/helpers'
+import {toAbsoluteUrl} from '../../../../pim/helpers'
 
 const Error500: FC = () => {
   return (

@@ -5,7 +5,7 @@ import {
   FeedsWidget4,
   FeedsWidget5,
   FeedsWidget6,
-} from '../../../../_metronic/partials/widgets'
+} from '../../../../pim/partials/widgets'
 
 const Feeds: FC = () => {
   return (

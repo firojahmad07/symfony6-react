@@ -6,8 +6,8 @@ import * as Yup from 'yup'
 import clsx from 'clsx'
 import {getUserByToken, register} from '../core/_requests'
 import {Link} from 'react-router-dom'
-import {toAbsoluteUrl} from '../../../../_metronic/helpers'
-import {PasswordMeterComponent} from '../../../../_metronic/assets/ts/components'
+import {toAbsoluteUrl} from '../../../../pim/helpers'
+import {PasswordMeterComponent} from '../../../../pim/assets/ts/components'
 import {useAuth} from '../core/Auth'
 
 const initialValues = {

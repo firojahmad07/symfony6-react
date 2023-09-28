@@ -7,7 +7,7 @@ user_login:
 user_verify_token:
     path: /verify_token
     controller: spygar.usermanagement.security.controller::verifyToken
-    methods: ['POST']
+    methods: ['POST', 'GET']
 
 forgot_password:
     path: /forgot/password

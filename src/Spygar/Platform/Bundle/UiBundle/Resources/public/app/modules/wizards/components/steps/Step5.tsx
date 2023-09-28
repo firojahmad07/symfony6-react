@@ -1,5 +1,5 @@
 import React, {FC} from 'react'
-import {KTIcon} from '../../../../../_metronic/helpers'
+import {KTIcon} from '../../../../../pim/helpers'
 import {Link} from 'react-router-dom'
 
 const Step5: FC = () => {

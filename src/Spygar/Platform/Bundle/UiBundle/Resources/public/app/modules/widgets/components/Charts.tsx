@@ -8,7 +8,7 @@ import {
   ChartsWidget6,
   ChartsWidget7,
   ChartsWidget8,
-} from '../../../../_metronic/partials/widgets'
+} from '../../../../pim/partials/widgets'
 
 const Charts: FC = () => {
   return (

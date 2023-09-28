@@ -6,7 +6,7 @@ import {
   StatisticsWidget4,
   StatisticsWidget5,
   StatisticsWidget6,
-} from '../../../../_metronic/partials/widgets'
+} from '../../../../pim/partials/widgets'
 
 const Statistics: FC = () => {
   return (

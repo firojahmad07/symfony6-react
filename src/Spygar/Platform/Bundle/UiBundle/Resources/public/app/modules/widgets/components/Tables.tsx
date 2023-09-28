@@ -13,7 +13,7 @@ import {
   TablesWidget11,
   TablesWidget12,
   TablesWidget13,
-} from '../../../../_metronic/partials/widgets'
+} from '../../../../pim/partials/widgets'
 
 const Tables: FC = () => {
   return (

@@ -1,5 +1,5 @@
 import {FC} from 'react'
-import {PageTitle} from '../../../_metronic/layout/core'
+import {PageTitle} from '../../../pim/layout/core'
 import {BuilderPage} from './BuilderPage'
 
 const BuilderPageWrapper: FC = () => {

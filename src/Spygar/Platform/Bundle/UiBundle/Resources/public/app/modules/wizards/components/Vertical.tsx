@@ -1,11 +1,11 @@
 import {useEffect, useRef, useState} from 'react'
-import {KTIcon} from '../../../../_metronic/helpers'
+import {KTIcon} from '../../../../pim/helpers'
 import {Step1} from './steps/Step1'
 import {Step2} from './steps/Step2'
 import {Step3} from './steps/Step3'
 import {Step4} from './steps/Step4'
 import {Step5} from './steps/Step5'
-import {StepperComponent} from '../../../../_metronic/assets/ts/components'
+import {StepperComponent} from '../../../../pim/assets/ts/components'
 import {Form, Formik, FormikValues} from 'formik'
 import {createAccountSchemas, ICreateAccount, inits} from './CreateAccountWizardHelper'
 

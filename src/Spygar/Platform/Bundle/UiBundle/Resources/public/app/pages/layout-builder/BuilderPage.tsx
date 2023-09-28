@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import clsx from 'clsx'
 import React, {useState} from 'react'
-import {KTIcon} from '../../../_metronic/helpers'
-import {getLayout, ILayout, LayoutSetup, useLayout} from '../../../_metronic/layout/core'
+import {KTIcon} from '../../../pim/helpers'
+import {getLayout, ILayout, LayoutSetup, useLayout} from '../../../pim/layout/core'
 
 const BuilderPage: React.FC = () => {
   const {setLayout} = useLayout()

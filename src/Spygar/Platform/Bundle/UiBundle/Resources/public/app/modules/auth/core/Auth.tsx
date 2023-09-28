@@ -8,11 +8,11 @@ import React, {
   Dispatch,
   SetStateAction,
 } from 'react'
-import {LayoutSplashScreen} from '../../../../_metronic/layout/core'
+import {LayoutSplashScreen} from '../../../../pim/layout/core'
 import {AuthModel, UserModel} from './_models'
 import * as authHelper from './AuthHelpers'
 import {getUserByToken} from './_requests'
-import {WithChildren} from '../../../../_metronic/helpers'
+import {WithChildren} from '../../../../pim/helpers'
 
 type AuthContextProps = {
   auth: AuthModel | undefined
