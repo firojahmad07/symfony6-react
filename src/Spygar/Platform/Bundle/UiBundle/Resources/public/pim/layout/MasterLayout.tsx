@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import {Outlet, useLocation} from 'react-router-dom'
 import {AsideDefault} from './components/aside/AsideDefault'
+import {AsideMainMenu} from './components/aside/AsideMainMenu'
 import {HeaderWrapper} from './components/header/HeaderWrapper'
 import {ScrollTop} from './components/ScrollTop'
 import {Content} from './components/Content'
@@ -31,7 +32,8 @@ const MasterLayout = () => {
             {/* begin::Wrapper */}
             <div className='wrapper d-flex flex-column flex-row-fluid' id='kt_wrapper'>
               <HeaderWrapper />
-              <AsideDefault />
+              {/* <AsideDefault /> */}
+              <AsideMainMenu />
               {/* begin::Content */}
               <div id='kt_content' className='content d-flex flex-column flex-column-fluid'>
                 <Content>

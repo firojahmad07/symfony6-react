@@ -60,6 +60,8 @@ const Card1: FC<Props> = ({
         <button className='btn btn-sm btn-light-primary fw-bolder' id='kt_drawer_chat_toggle'>
           Send Message
         </button>
+
+
       </div>
     </div>
   )

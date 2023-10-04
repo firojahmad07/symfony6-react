@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import {useLocation} from 'react-router'
-import {AsideMenuMain} from './AsideMenuMain'
+import {AsideMainMenu} from './AsideMainMenu'
 import {DrawerComponent, ToggleComponent} from '../../../assets/ts/components'
 
 type Props = {
@@ -33,7 +33,7 @@ const AsideMenu: React.FC<Props> = ({asideMenuCSSClasses}) => {
         id='#kt_aside_menu'
         data-kt-menu='true'
       >
-        <AsideMenuMain />
+        <AsideMainMenu />
       </div>
     </div>
   )

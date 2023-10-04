@@ -68,7 +68,7 @@ const AsideTabs: FC<Props> = ({link, setLink}) => (
     <ul className='nav flex-column' id='kt_aside_nav_tabs'>
       {tabs.map((t) => (
         <li key={t.link} className={clsx('nav-link btn btn-icon btn-active-color-primary btn-color-gray-400 btn-active-light', {active: t.link === link} )}>
-          <Link to={t.route}>
+          <Link to={t.route} onClick={() => setLink(t.link)}>
             <KTIcon iconName={t.icon} className='fs-2x' />
             <p>{t.title}</p>
           </Link>

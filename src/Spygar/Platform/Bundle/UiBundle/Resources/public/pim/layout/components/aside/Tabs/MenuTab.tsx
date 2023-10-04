@@ -5,7 +5,7 @@ import {
   ScrollComponent,
   ToggleComponent,
 } from '../../../../assets/ts/components'
-import {AsideMenuMain} from '../AsideMenuMain'
+import {AsideMainMenu} from '../AsideMainMenu'
 
 const MenuTab = () => {
   useEffect(() => {
@@ -24,7 +24,7 @@ const MenuTab = () => {
       data-kt-menu='true'
     >
       <div id='kt_aside_menu_wrapper' className='menu-fit'>
-        <AsideMenuMain />
+        <AsideMainMenu />
       </div>
     </div>
   )

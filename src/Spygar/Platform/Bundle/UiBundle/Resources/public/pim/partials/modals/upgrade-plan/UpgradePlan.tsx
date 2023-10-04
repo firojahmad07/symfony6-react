@@ -21,7 +21,7 @@ const plans = [
         supported: true,
       },
       {
-        title: 'Analytics Module',
+        title: 'Analytics.tsx Module',
         supported: true,
       },
       {
@@ -61,7 +61,7 @@ const plans = [
         supported: true,
       },
       {
-        title: 'Analytics Module',
+        title: 'Analytics.tsx Module',
         supported: true,
       },
       {
@@ -102,7 +102,7 @@ const plans = [
         supported: true,
       },
       {
-        title: 'Analytics Module',
+        title: 'Analytics.tsx Module',
         supported: true,
       },
       {

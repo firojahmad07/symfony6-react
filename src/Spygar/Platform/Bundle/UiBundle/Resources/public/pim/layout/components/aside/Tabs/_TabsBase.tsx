@@ -1,22 +1,23 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, {FC} from 'react'
-import {AuthorsTab} from './AuthorsTab'
-import {MenuTab} from './MenuTab'
-import {NotificationsTab} from './NotificationsTab'
+// import {AuthorsTab} from './AuthorsTab'
+// import {MenuTab} from './MenuTab'
+// import {NotificationsTab} from './NotificationsTab'
 import {IndexTab} from './IndexTab'
 import {SalesTab} from './SalesTab'
 import {CatalogTab} from './CatalogTab'
 import {CMSTab} from './CMSTab'
 import {SystemTab} from './SystemTab'
 import {SettingsTab} from './SettingsTab'
-import {SubscriptionsTab} from './SubscriptionsTab'
-import {TasksTab} from './TasksTab'
+// import {SubscriptionsTab} from './SubscriptionsTab'
+// import {TasksTab} from './TasksTab'
 
 type Props = {
   link: string
 }
 
 const SelectedTab: FC<Props> = ({link}) => {
+  console.log('selected Link : ', link );
   switch (link) {
     case 'dashboard':
       return <IndexTab />
