@@ -2,9 +2,9 @@ import React from 'react';
 
 // ================== menu icons =====================
 import DashboardIcon from '../icons/menu/DashboardIcon';
-import CmsIcon from '../icons/menu/CmsIcon';
+import StoreIcon from '../icons/menu/StoreIcon';
 import HelpIcon from '../icons/menu/HelpIcon';
-import ProductIcon from '../icons/menu/ProductIcon';
+import CatalogIcon from '../icons/menu/CatalogIcon';
 import SalesIcon from '../icons/menu/SalesIcon';
 import SettingsIcon from '../icons/menu/SettingsIcon';
 import SystemIcon from '../icons/menu/SystemIcon';
@@ -21,9 +21,9 @@ import ViewIcon from '../icons/actions/ViewIcon';
 const iconCollection = {
     // ======== menu icons =================
     'dashboard': <DashboardIcon />,
-    'cms': <CmsIcon />,
+    'store': <StoreIcon />,
     'sales': <SalesIcon />,
-    'product': <ProductIcon />,
+    'catalog': <CatalogIcon />,
     'settings': <SettingsIcon />,
     'system': <SystemIcon />,
     'help': <HelpIcon />,

@@ -4,50 +4,32 @@ import {KTIcon, toAbsoluteUrl} from '../../../helpers'
 import {Link} from "react-router-dom";
 
 const tabMenu = {}
-const tabs: ReadonlyArray<{link: string; icon: string; route: string, title:string, tooltip: string}> = [
+const tabs: ReadonlyArray<{link: string; icon: string; title:string}> = [
   {
     link: 'dashboard',
     icon: 'dashboard',
-    route: 'dashboard',
     title: 'Dashboard',
-    tooltip: 'Dashboard',
-  },
-  {
+  },{
     link: 'sales',
     icon: 'sales',
-    route: 'sales',
     title: 'Sales',
-    tooltip: 'Sales',
-  },
-  {
-    link: 'products',
-    icon: 'products',
-    route: 'products',
-    title: 'Products',
-    tooltip: 'Products',
-  },
-  {
-    link: 'cms',
-    icon: 'cms',
-    route: 'cms',
+  },{
+    link: 'catalog',
+    icon: 'catalog',
+    title: 'Catalog',
+  },{
+    link: 'store',
+    icon: 'store',
     title: 'CMS',
-    tooltip: 'CMS',
-  },
-  {
+  },{
     link: 'settings',
     icon: 'settings',
-    route: 'settings',
     title: 'Settings',
-    tooltip: 'Settings',
-  },
-  {
+  },{
     link: 'system',
     icon: 'system',
-    route: 'system',
     title: 'System',
-    tooltip: 'System',
-  }
-]
+  }]
 
 type Props = {
   link: string
@@ -68,7 +50,7 @@ const AsideTabs: FC<Props> = ({link, setLink}) => (
     <ul className='nav flex-column' id='kt_aside_nav_tabs'>
       {tabs.map((t) => (
         <li key={t.link} className={clsx('nav-link btn btn-icon btn-active-color-primary btn-color-gray-400 btn-active-light', {active: t.link === link} )}>
-          <Link to={t.route} onClick={() => setLink(t.link)}>
+          <Link to={t.link} onClick={() => setLink(t.link)}>
             <KTIcon iconName={t.icon} className='fs-2x' />
             <p>{t.title}</p>
           </Link>

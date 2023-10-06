@@ -12,8 +12,7 @@ const SettingsTab = () => {
         <span className='menu-section text-muted text-uppercase fs-8 ls-1'>Settings Navigation</span>
       </div>
     </div>
-      <AsideMenuItem to='/apps/user-management/users' icon='switch' title='Locales' fontIcon='bi-layers' />
-      <AsideMenuItem to='/apps/user-management/users' icon='switch' title='Currencies' fontIcon='bi-layers' />
+      <AsideMenuItem to='/settings/users' icon='switch' title='Users' fontIcon='bi-layers' />
    </>
   )
 }

@@ -25,7 +25,7 @@ const SelectedTab: FC<Props> = ({link}) => {
       return <SalesTab />
     case 'catalog':
       return <CatalogTab />
-    case 'cms':
+    case 'store':
       return <CMSTab />
     case 'settings':
       return <SettingsTab />
