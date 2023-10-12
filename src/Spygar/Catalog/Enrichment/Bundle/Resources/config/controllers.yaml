@@ -1,0 +1,41 @@
+services:
+    _defaults:
+        autowire: true  
+        autoconfigure: true
+        public: true
+        
+    # Locale internal controller api
+    spygar.locale.rest.internal.controller:
+        class: Spygar\Catalog\Enrichment\Bundle\Controller\Rest\Internal\LocaleController
+        public: true
+        arguments:
+            - "@spygar.locale.repository"
+
+    # Currency internal currency  controller api
+    spygar.currency.rest.internal.controller:
+        class: Spygar\Catalog\Enrichment\Bundle\Controller\Rest\Internal\CurrencyController
+        public: true
+        arguments:
+            - "@spygar.currency.repository"
+
+    # # category controller
+    # spygar.category.rest.internal.controller:
+    #     class: Spygar\Catalog\Enrichment\Bundle\Controller\Rest\Internal\CategoryController
+    #     public: true
+    #     arguments:
+    #         - "@spygar.category.repository"
+    #         - "@spygar.locale.repository"
+
+    # # association type controller
+    # spygar.association_type.rest.internal.controller:
+    #     class: Spygar\Catalog\Enrichment\Bundle\Controller\Rest\Internal\AssociationTypeController
+    #     public: true
+    #     arguments:
+    #         - "@spygar.association_type.repository"
+
+    # system configuration controller
+    spygar.system_configuration.rest.internal.controller:
+        class: Spygar\Catalog\Enrichment\Bundle\Controller\Rest\Internal\ConfigurationController
+        public: true
+        arguments:
+            - "@spygar.system.configuration.repository"

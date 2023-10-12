@@ -10,9 +10,7 @@ type Props = {
 
 const KTIcon: React.FC<Props> = ({iconName}) => {
   return (
-        <div>
-          { iconCollection[iconName] ? iconCollection[iconName] : <DefaultIcon/> }
-        </div>
+        <> { iconCollection[iconName] ? iconCollection[iconName] : <DefaultIcon/> } </>
   )
 }
 export {KTIcon}

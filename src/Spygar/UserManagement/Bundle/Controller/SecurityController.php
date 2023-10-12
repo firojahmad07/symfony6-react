@@ -16,12 +16,9 @@ class SecurityController extends AbstractController
     /** @var UserRepository */
     private $userRepository;
 
-    private $mappings;
-
-    public function __construct(UserRepository $userRepository, $mappings) 
+    public function __construct(UserRepository $userRepository) 
     {
         $this->userRepository = $userRepository;
-        $this->mappings= $mappings;
     }
 
     public function userLogin(#[CurrentUser]?User $user)
@@ -43,7 +40,6 @@ class SecurityController extends AbstractController
     /** Verify login token */
     public function verifyToken(#[CurrentUser]?User $user)
     {
-        dump($this->mappings);die;
         return $this->json([
             'user'  => $user->getUserIdentifier(),
             'api_token' => $user->getAccessToken(),

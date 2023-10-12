@@ -12,9 +12,15 @@ const SystemTab = () => {
         <span className='menu-section text-muted text-uppercase fs-8 ls-1'>System Navigation</span>
       </div>
     </div>
-      <AsideMenuItem to='/apps/user-management/users' icon='switch' title='User' fontIcon='bi-layers' />
-      <AsideMenuItem to='/apps/user-management/users' icon='switch' title='User groups' fontIcon='bi-layers' />
-      <AsideMenuItem to='/apps/user-management/users' icon='switch' title='Roles' fontIcon='bi-layers' />
+    <AsideMenuItem to='/apps/user-management/users' icon='switch' title='Configuration' fontIcon='bi-layers' />
+    <div className='menu-item'>
+      <div className='menu-content pt-8 pb-2'>
+        <span className='menu-section text-muted text-uppercase fs-8 ls-1'>User Management</span>
+      </div>
+    </div>
+    <AsideMenuItem to='/apps/user-management/users' icon='switch' title='User' fontIcon='bi-layers' />
+    <AsideMenuItem to='/apps/user-management/users' icon='switch' title='User groups' fontIcon='bi-layers' />
+    <AsideMenuItem to='/apps/user-management/users' icon='switch' title='Roles' fontIcon='bi-layers' />
    </>
   )
 }

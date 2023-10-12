@@ -1,7 +1,8 @@
 import React, {useEffect} from 'react'
 import {useIntl} from 'react-intl'
 import {PageLink, PageTitle} from '../../../../pim/layout/core'
-
+import { KTIcon } from '../../../../pim/helpers'
+import { Link } from 'react-router-dom';
 const ProductBreadCrumbs: Array<PageLink> = [
   {
     title: 'Products',
@@ -158,19 +159,12 @@ const ProductList = () => {
                                     <span className="fw-bold">17/07/2023</span>
                                 </td>
                                 <td className="text-end">
-                                    <a href="#" className="btn btn-sm btn-light btn-flex btn-center btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-                                        <i className="ki-duotone ki-down fs-5 ms-1"></i></a>
-                                    <div className="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-                                        <div className="menu-item px-3">
-                                            <a href="../../demo7/dist/apps/ecommerce/sales/details.html" className="menu-link px-3">View</a>
-                                        </div>
-                                        <div className="menu-item px-3">
-                                            <a href="../../demo7/dist/apps/ecommerce/sales/edit-order.html" className="menu-link px-3">Edit</a>
-                                        </div>
-                                        <div className="menu-item px-3">
-                                            <a href="#" className="menu-link px-3" data-kt-ecommerce-order-filter="delete_row">Delete</a>
-                                        </div>
-                                    </div>
+                                    <Link to="/catalog/product/12">
+                                        <KTIcon iconName='edit' className='fs-1 text-primary' />
+                                    </Link>
+                                    <a href="#" className="btn btn-sm btn-light btn-flex btn-center btn-active-light-primary" >
+                                        <KTIcon iconName='delete' className='fs-1 text-primary' />
+                                    </a>
                                 </td>
                             </tr>
                             </tbody>

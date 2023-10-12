@@ -1,0 +1,28 @@
+# login path
+spygar_store_shop:
+  path: /
+  controller: spygar.store.controller::index
+
+spygar_store_produts:
+  path: /products
+  controller: spygar.store.controller::products
+
+spygar_store_produt_details:
+  path: /product-details
+  controller: spygar.store.controller::productDetails
+
+spygar_store_wishlist:
+  path: /wishlist
+  controller: spygar.store.controller::wishlist
+
+spygar_store_cart:
+  path: /cart
+  controller: spygar.store.controller::cart
+
+spygar_store_checkout:
+  path: /checkout
+  controller: spygar.store.controller::checkout
+
+spygar_store_user_account:
+  path: /user/account
+  controller: spygar.store.user.controller::account

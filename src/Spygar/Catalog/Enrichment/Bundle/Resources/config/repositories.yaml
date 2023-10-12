@@ -1,0 +1,24 @@
+services:
+    spygar.system.configuration.repository:
+        class: Spygar\Catalog\Enrichment\Bundle\Repository\ConfigurationRepository
+        arguments:
+            - "@doctrine.orm.entity_manager"
+
+    spygar.locale.repository:
+        class: Spygar\Catalog\Enrichment\Bundle\Repository\LocaleRepository
+        arguments:
+            - "@doctrine.orm.entity_manager"
+            # - "@spygar.system.configuration.repository"
+            
+    spygar.currency.repository:
+        class: Spygar\Catalog\Enrichment\Bundle\Repository\CurrencyRepository
+        arguments:
+            - "@doctrine.orm.entity_manager"
+
+    spygar.category.repository:
+        class: Spygar\Catalog\Enrichment\Bundle\Repository\CategoryRepository
+        arguments:
+            - "@doctrine.orm.entity_manager"
+            - "@spygar.usermanagement.user.context"
+
+

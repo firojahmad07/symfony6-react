@@ -14,6 +14,9 @@ import BuilderPageWrapper from '../pages/layout-builder/BuilderPageWrapper'
 const PrivateRoutes = () => {
   const SalesWrapper = lazy(() => import('../pages/SalesWrapper'))
   const CatalogWrapper = lazy(() => import('../pages/CatalogWrapper'))
+  const ProfilePage = lazy(() => import('../modules/profile/ProfilePage'))
+  const WizardsPage = lazy(() => import('../modules/wizards/WizardsPage'))
+  const AccountPage = lazy(() => import('../modules/accounts/AccountPage'))
   const StoreWrapper = lazy(() => import('../pages/StoreWrapper'))
   const SettingsWrapper = lazy(() => import('../pages/SettingsWrapper'))
   const SystemWrapper = lazy(() => import('../pages/SystemWrapper'))
@@ -35,6 +38,31 @@ const PrivateRoutes = () => {
         <Route path='system/*' element={ <SuspensedView> <SystemWrapper /> </SuspensedView> } />
 
         <Route path='*' element={<Navigate to='/error/404' />} />
+
+        <Route
+          path='crafted/pages/profile/*'
+          element={
+            <SuspensedView>
+              <ProfilePage />
+            </SuspensedView>
+          }
+        />
+        <Route
+            path='crafted/account/*'
+            element={
+              <SuspensedView>
+                <AccountPage />
+              </SuspensedView>
+            }
+          />
+          <Route
+          path='crafted/pages/wizards/*'
+          element={
+            <SuspensedView>
+              <WizardsPage />
+            </SuspensedView>
+          }
+        />
       </Route>
     </Routes>
   )

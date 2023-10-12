@@ -11,6 +11,8 @@
         "doctrine/doctrine-bundle": "^2.10",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.15",
+        "league/csv": "^9.11",
+        "league/flysystem": "^3.17",
         "symfony/asset": "6.3.*",
         "symfony/console": "6.3.*",
         "symfony/dotenv": "6.3.*",
@@ -19,7 +21,6 @@
         "symfony/runtime": "6.3.*",
         "symfony/security-bundle": "6.3.*",
         "symfony/twig-bundle": "6.3.*",
-        "spygar/akeneo-magento2-connector": "dev-1.0.7",
         "symfony/yaml": "6.3.*"
     },
     "config": {
@@ -62,12 +63,7 @@
             "@auto-scripts"
         ]
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/firojahmad07/spygar-akeneo-magento2-connector.git"
-        }
-    ],
+    "repositories": [],
     "conflict": {
         "symfony/symfony": "*"
     },

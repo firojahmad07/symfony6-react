@@ -1,0 +1,49 @@
+<html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Spygar Store</title>
+		{% block stylesheets %}
+			<!-- Favicon -->
+			<link rel="shortcut icon" type="image/x-icon" href="{{ asset('bundles/store/imgs/theme/favicon.svg')}}" />
+			<!-- Template CSS -->
+			<link rel="stylesheet" href="{{ asset('bundles/store/css/plugins/animate.min.css')}}" />
+			<link rel="stylesheet" href="{{ asset('bundles/store/css/main.css')}}" />
+		{% endblock %}
+		<!-- {{ asset('bundles/store/css/slick.css') }} -->
+    </head>
+    <body>
+
+<body>
+	{% include "@Store/common/header.html.twig" %}
+    {% block contents %} {% endblock %}
+
+	{% include "@Store/common/footer.html.twig" %}
+	{% include "@Store/common/pre-loader.html.twig" %}
+
+	<!-- Vendor JS-->
+	<script src="{{ asset('bundles/store/js/vendor/modernizr-3.6.0.min.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/vendor/jquery-3.6.0.min.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/vendor/jquery-migrate-3.3.0.min.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/vendor/bootstrap.bundle.min.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/plugins/slick.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/plugins/jquery.syotimer.min.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/plugins/waypoints.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/plugins/wow.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/plugins/perfect-scrollbar.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/plugins/magnific-popup.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/plugins/select2.min.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/plugins/counterup.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/plugins/jquery.countdown.min.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/plugins/images-loaded.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/plugins/isotope.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/plugins/scrollup.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/plugins/jquery.vticker-min.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/plugins/jquery.theia.sticky.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/plugins/jquery.elevatezoom.js') }}"></script>
+	<!-- Template  JS -->
+	<script src="{{ asset('bundles/store/js/main.js') }}"></script>
+	<script src="{{ asset('bundles/store/js/shop.js') }}"></script>
+
+</body>
+
+</html>

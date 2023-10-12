@@ -1,0 +1,9 @@
+services:
+    spygar.fixture.installer.command:
+        class: Spygar\Platform\Installer\Commands\FixtureInstallerCommand
+        arguments:
+            - "@doctrine.orm.entity_manager"
+            - "@spygar.locale.repository"
+            - "@spygar.currency.repository"
+        tags:
+            - { name: console.command }
