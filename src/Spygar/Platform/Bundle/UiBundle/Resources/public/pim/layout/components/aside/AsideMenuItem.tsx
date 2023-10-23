@@ -26,10 +26,9 @@ const AsideMenuItem: FC<Props & WithChildren> = ({
 
   return (
     <div className='menu-item'>
-      <Link className={clsx('menu-link without-sub', {active: isActive})} to={to}>
+      <Link className={clsx('menu-link without-sub')} to={to}>
         <span className='menu-title'>{title}</span>
       </Link>
-      {children}
     </div>
   )
 }
