@@ -12,8 +12,7 @@ spygar_user_management_index:
 
 spygar_catalog_enrichment:
     resource: "@CatalogEnrichmentBundle/Resources/config/routes.yaml"
-    prefix: /spygar/rest
-
+    prefix: /spygar/
 # spygar_store_index:
 #     resource: "@StoreBundle/Resources/config/routes.yaml"
 #     prefix: /

@@ -3,10 +3,8 @@ import {Navigate, Route, Routes} from 'react-router-dom'
 import {MasterLayout} from '../../pim/layout/MasterLayout'
 import TopBarProgress from 'react-topbar-progress-indicator'
 import {DashboardWrapper} from '../pages/dashboard/DashboardWrapper'
+import {Analytics} from '../pages/dashboard/Analytics'
 
-// import SalesWrapper from '../pages/SalesWrapper';
-
-import {MenuTestPage} from '../pages/MenuTestPage'
 import {getCSSVariableValue} from '../../pim/assets/ts/_utils'
 import {WithChildren} from '../../pim/helpers'
 import BuilderPageWrapper from '../pages/layout-builder/BuilderPageWrapper'
@@ -25,11 +23,10 @@ const PrivateRoutes = () => {
     <Routes>
       <Route element={<MasterLayout />}>
         {/* Redirect to Dashboard after success login/registartion */}
-        <Route path='auth/*' element={<Navigate to='/dashboard' />} />
-        {/* Pages */}
-        <Route path='dashboard' element={<DashboardWrapper />} />
-        <Route path='builder' element={<BuilderPageWrapper />} />
-        <Route path='menu-test' element={<MenuTestPage />} />
+        <Route path='auth/*' element={<Navigate to='/analytics' />} />
+        {/* Pages */}        
+        <Route path='analytics' element={<DashboardWrapper />} />
+        <Route path='catalog-monitory' element={<Analytics />} />
 
         <Route path='sales/*' element={ <SuspensedView> <SalesWrapper /> </SuspensedView> } />
         <Route path='catalog/*' element={ <SuspensedView> <CatalogWrapper /> </SuspensedView> } />

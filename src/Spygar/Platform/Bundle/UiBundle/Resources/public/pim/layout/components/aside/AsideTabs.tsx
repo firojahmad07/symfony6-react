@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 const tabMenu = {}
 const tabs: ReadonlyArray<{link: string; icon: string; title:string}> = [
   {
-    link: 'dashboard',
+    link: 'analytics',
     icon: 'dashboard',
     title: 'Dashboard',
   },{

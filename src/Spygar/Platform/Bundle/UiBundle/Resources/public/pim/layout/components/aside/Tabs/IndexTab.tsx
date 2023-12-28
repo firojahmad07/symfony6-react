@@ -12,13 +12,8 @@ const IndexTab = () => {
         <span className='menu-section text-muted text-uppercase fs-8 ls-1'>Dashboard</span>
       </div>
     </div>
-    <AsideMenuItem
-        to='/dashboard'
-        icon='color-swatch'
-        title="Analytics"
-        fontIcon='bi-app-indicator'
-      />
-      <AsideMenuItem to='/builder' icon='switch' title='Catalog Monitoring' fontIcon='bi-layers' />
+      <AsideMenuItem to='/analytics' icon='color-swatch'  title="Analytics" fontIcon='bi-app-indicator' />
+      <AsideMenuItem to='/catalog-monitory' icon='switch' title='Catalog Monitoring' fontIcon='bi-layers' />
    </>
   )
 }

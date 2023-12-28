@@ -1,4 +1,4 @@
-import {FC} from 'react'
+import React, {FC} from 'react'
 import {Link} from 'react-router-dom'
 import {toAbsoluteUrl} from '../../../../pim/helpers'
 
@@ -30,7 +30,7 @@ const Error404: FC = () => {
 
       {/* begin::Link */}
       <div className='mb-0'>
-        <Link to='/dashboard' className='btn btn-sm btn-primary'>
+        <Link to='/analytics' className='btn btn-sm btn-primary'>
           Return Home
         </Link>
       </div>

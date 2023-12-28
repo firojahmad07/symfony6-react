@@ -1,8 +1,8 @@
 <?php
-namespace Spygar\Platform\Bundle\SettingBundle\Controller\Rest\Internal;
+namespace Spygar\Catalog\Enrichment\Bundle\Controller\Rest\Internal;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Spygar\Platform\Bundle\SettingBundle\Repository\LocaleRepository;
+use Spygar\Catalog\Enrichment\Bundle\Repository\LocaleRepository;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 /**
@@ -12,15 +12,9 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class LocaleController extends AbstractController
 {
-    /** @var LocaleRepository $localeRepository */
-    private $localeRepository;
-
-    /**
-     * @param LocaleRepository $localeRepository
-     */
-
-    public function __construct(LocaleRepository $localeRepository)
-    {
+    public function __construct(
+        private LocaleRepository $localeRepository
+    ) {
         $this->localeRepository = $localeRepository;
     }
     /**
@@ -28,8 +22,8 @@ class LocaleController extends AbstractController
      */
     public function list(Request $request)
     {
-        $page    = $request->get('page');
-        $limit   = $request->get('limit');
+        $page  = $request->get('page');
+        $limit = $request->get('limit');
         
         $records                 = $this->localeRepository->getTotalRecords($limit);
         $results['data']         = $this->localeRepository->localeListWithPagination($page, $limit);

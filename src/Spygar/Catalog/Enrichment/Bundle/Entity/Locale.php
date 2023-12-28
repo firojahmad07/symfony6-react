@@ -3,11 +3,12 @@
 namespace Spygar\Catalog\Enrichment\Bundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Metadata\ApiResource;
 
-/**
- * @ORM\Entity(repositoryClass="Spygar\Catalog\Enrichment\Bundle\LocaleRepository")
- * @ORM\Table(name="spygar_catalog_locale")
- */
+// /**
+//  * @ORM\Entity(repositoryClass="Spygar\Catalog\Enrichment\Bundle\LocaleRepository")
+//  * @ORM\Table(name="spygar_catalog_locale")
+//  */
 class Locale
 {
     /**

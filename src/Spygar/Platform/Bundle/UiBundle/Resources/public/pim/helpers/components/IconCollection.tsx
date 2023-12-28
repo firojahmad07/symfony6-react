@@ -1,5 +1,6 @@
 import React from 'react';
 
+import DefaultAvatarIcon from "../icons/avatars/DefaultAvatarIcon";
 // ================== menu icons =====================
 import DashboardIcon from '../icons/menu/DashboardIcon';
 import StoreIcon from '../icons/menu/StoreIcon';
@@ -36,6 +37,7 @@ const iconCollection = {
     'delete': <DeleteIcon />,
     'edit': <EditIcon />,
     'view': <ViewIcon />,
+    'default-avatar': <DefaultAvatarIcon />,
 }
 
 export default iconCollection;

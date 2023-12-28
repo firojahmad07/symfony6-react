@@ -747,26 +747,7 @@ const DashboardPage = () => {
                     </div>
                 </div>
                 <div className="row gy-5 g-xl-10">
-                    <div className="col-xl-4 mb-xl-10">
-                        <div className="card h-md-100" dir="ltr">
-                            <div className="card-body d-flex flex-column flex-center">
-                                <div className="mb-2">
-                                    <h1 className="fw-semibold text-gray-800 text-center lh-lg">Have you tried
-                                        <br />new
-                                        <span className="fw-bolder">eCommerce App ?</span></h1>
-                                    <div className="py-10 text-center">
-                                        <img src="assets/media/svg/illustrations/easy/2.svg" className="theme-light-show w-200px" alt="" />
-                                        <img src="assets/media/svg/illustrations/easy/2-dark.svg" className="theme-dark-show w-200px" alt="" />
-                                    </div>
-                                </div>
-                                <div className="text-center mb-1">
-                                    <a className="btn btn-sm btn-primary me-2" href="../../demo7/dist/apps/ecommerce/sales/listing.html">View App</a>
-                                    <a className="btn btn-sm btn-light" href="../../demo7/dist/apps/ecommerce/catalog/add-product.html">New Product</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-8 mb-5 mb-xl-10">
+                    <div className="col-xl-12 mb-5 mb-xl-10">
                         <div className="card card-flush h-xl-100">
                             <div className="card-header pt-7">
                                 <h3 className="card-title align-items-start flex-column">

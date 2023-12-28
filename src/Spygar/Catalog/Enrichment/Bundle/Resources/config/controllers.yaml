@@ -7,7 +7,6 @@ services:
     # Locale internal controller api
     spygar.locale.rest.internal.controller:
         class: Spygar\Catalog\Enrichment\Bundle\Controller\Rest\Internal\LocaleController
-        public: true
         arguments:
             - "@spygar.locale.repository"
 

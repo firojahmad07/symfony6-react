@@ -1,0 +1,103 @@
+datagrid:
+    product-grid:
+        options:
+            entity: product
+            fetchMethod: GET
+            fetchUrl: /api/users
+        source:
+            acl_resource:      pim_enrich_product_index
+            type:              pim_datasource_product
+        columns:
+            user:
+                label: Name
+                data_name:     identifier
+                type:          field            
+            roles:
+                label:         Roles
+                data_name:     label
+                type:          field
+            last_login:
+                label:         Last Login
+                data_name:     family
+                type:          field
+            active:
+                label:         Active
+                frontend_type: enabled            
+            created:
+                label:         Created
+                type:          field
+        actions:
+            edit:
+                type:      navigate-product-and-product-model
+                label:
+                icon:
+                rowAction: true
+            delete:
+                launcherOptions:
+                    className: AknIconButton AknIconButton--small AknIconButton--trash
+                type:  delete-product
+                label: pim_datagrid.actions.delete_product
+                link:  delete_link
+                acl_resource: pim_enrich_product_remove
+            toggle_status:
+                launcherOptions:
+                    className: AknIconButton AknIconButton--small AknIconButton--switch
+                type:  toggle-product
+                label: pim_datagrid.actions.toggle_status
+                link:  toggle_status_link
+                acl_resource: pim_enrich_product_change_state
+        mass_actions:
+            delete:
+                label: pim_datagrid.mass_action_group.bulk_actions.label
+            export_export:
+                label: pim_datagrid.mass_action_group.quick_export.label
+        sorters:
+            columns:
+                identifier:
+                    data_name: identifier
+                    sorter: product_field
+                family:
+                    data_name: familyLabel
+                    sorter:    product_family
+                enabled:
+                    data_name: enabled
+                    sorter:    product_field
+                completeness:
+                    data_name: ratio
+                    sorter:    product_completeness
+                created:
+                    data_name: created
+                    sorter:    product_field
+                updated:
+                    data_name: updated
+                    sorter:    product_field
+        filters:
+            columns:
+                name:
+                    type: string
+                    label: 'pim_datagrid.filters.label_or_identifier.label_with_uuid'
+                    data_name: label_or_identifier
+                enabled:
+                    type:      boolean
+                    label:     'pim_datagrid.filters.enabled.label'
+                    data_name: enabled
+                    options:
+                        field_options:
+                            choices:
+                                Enabled: 1
+                                Disabled: 0
+                created:
+                    type:      product_date
+                    ftype:     date
+                    data_name: created
+                    label:     'pim_datagrid.filters.created.label'
+                email:
+                    type: product_value_string
+                    ftype: identifier
+                    label: 'pim_datagrid.filters.identifier.label'
+                    data_name: identifier
+                    options:
+                        field_options:
+                            attr:
+                                choice_list: true
+                                empty_choice: true

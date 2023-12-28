@@ -1,4 +1,4 @@
-import {useMemo} from 'react'
+import React, {useMemo} from 'react'
 import {useTable, ColumnInstance, Row} from 'react-table'
 import {CustomHeaderColumn} from '../table/columns/CustomHeaderColumn'
 import {CustomRow} from '../table/columns/CustomRow'

@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import {useIntl} from 'react-intl'
 import {PageLink, PageTitle} from '../../../../pim/layout/core'
-
+console.log("we are here");
 const LocaleBreadCrumbs: Array<PageLink> = [
   {
     title: 'System',
@@ -30,36 +30,25 @@ const LocaleList = () => {
                                     <span className="path1"></span>
                                     <span className="path2"></span>
                                 </i>
-                                <input type="text" data-kt-ecommerce-order-filter="search" className="form-control form-control-solid w-250px ps-12" placeholder="Search Order" />
+                                <input type="text" data-kt-ecommerce-order-filter="search" className="form-control form-control-solid w-250px ps-12" placeholder="Search locale" />
                             </div>
                         </div>
-                        <div className="card-toolbar flex-row-fluid justify-content-end gap-5">
-                            <div className="input-group w-250px">
-                                <input className="form-control form-control-solid rounded rounded-end-0" placeholder="Pick date range" id="kt_ecommerce_sales_flatpickr" />
-                                <button className="btn btn-icon btn-light" id="kt_ecommerce_sales_flatpickr_clear">
-                                    <i className="ki-duotone ki-cross fs-2">
-                                        <span className="path1"></span>
-                                        <span className="path2"></span>
-                                    </i>
-                                </button>
+                    </div>
+                    <div className="card-header align-items-center py-5 gap-2 gap-md-5">
+                        <div className="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                            <div className="dataTables_paginate paging_simple_numbers" id="kt_table_users_paginate">
+                                <ul className="pagination">
+                                    <li className="paginate_button page-item previous disabled" id="kt_table_users_previous">
+                                        <a href="#" aria-controls="kt_table_users" data-dt-idx="0" className="page-link">
+                                            <i className="previous"></i>
+                                        </a>
+                                    </li>
+                                    <li className="paginate_button page-item active"><a href="#" aria-controls="kt_table_users" data-dt-idx="1" className="page-link">1</a></li>
+                                    <li className="paginate_button page-item "><a href="#" aria-controls="kt_table_users" data-dt-idx="2" className="page-link">2</a></li>
+                                    <li className="paginate_button page-item "><a href="#" aria-controls="kt_table_users" data-dt-idx="3" className="page-link">3</a></li>
+                                    <li className="paginate_button page-item next" id="kt_table_users_next"><a href="#" aria-controls="kt_table_users" data-dt-idx="4" className="page-link"><i className="next"></i></a></li>
+                                    </ul>
                             </div>
-                            <div className="w-100 mw-150px">
-                                <select className="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Status" data-kt-ecommerce-order-filter="status">
-                                    <option></option>
-                                    <option value="all">All</option>
-                                    <option value="Cancelled">Cancelled</option>
-                                    <option value="Completed">Completed</option>
-                                    <option value="Denied">Denied</option>
-                                    <option value="Expired">Expired</option>
-                                    <option value="Failed">Failed</option>
-                                    <option value="Pending">Pending</option>
-                                    <option value="Processing">Processing</option>
-                                    <option value="Refunded">Refunded</option>
-                                    <option value="Delivered">Delivered</option>
-                                    <option value="Delivering">Delivering</option>
-                                </select>
-                            </div>
-                            <a href="../../demo7/dist/apps/ecommerce/catalog/add-product.html" className="btn btn-primary">Add Order</a>
                         </div>
                     </div>
                     <div className="card-body pt-0">
