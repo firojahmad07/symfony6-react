@@ -1,7 +1,7 @@
 const path = require('path');
 // ./public/bundles/ui/index.tsx',
 let entitryFile = '/index.tsx';
-let rootPath = path.resolve(__dirname, './public/bundles/ui');
+let rootPath = path.resolve(__dirname, './public/bundles/ui/');
 let distPath = path.resolve(__dirname, './public/dist');
 // const {createDatagridRegistry} = require('./webpack/requirejs-utils');
 function getEntryFiles() {

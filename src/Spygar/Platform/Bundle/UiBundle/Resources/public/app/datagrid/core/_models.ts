@@ -1,4 +1,5 @@
-import {ID, Response} from '../../../../../../pim/helpers'
+import {ID, Response} from '@/pim/helpers'
+
 export type User = {
   id?: ID
   name?: string

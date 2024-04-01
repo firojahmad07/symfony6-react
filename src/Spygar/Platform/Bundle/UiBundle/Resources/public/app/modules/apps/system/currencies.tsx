@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import {useIntl} from 'react-intl'
-import {PageLink, PageTitle} from '../../../../pim/layout/core'
+import {PageLink, PageTitle} from '@/pim/layout/core'
 
 const CurrencyBreadCrumbs: Array<PageLink> = [
     {

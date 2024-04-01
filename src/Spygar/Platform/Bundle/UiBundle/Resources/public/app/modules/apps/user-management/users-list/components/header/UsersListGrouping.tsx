@@ -1,5 +1,5 @@
 import {useQueryClient, useMutation} from 'react-query'
-import {QUERIES} from '../../../../../../../pim/helpers'
+import {QUERIES} from '@/pim/helpers'
 import {useListView} from '../../core/ListViewProvider'
 import {useQueryResponse} from '../../core/QueryResponseProvider'
 import {deleteSelectedUsers} from '../../core/_requests'

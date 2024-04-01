@@ -1,4 +1,4 @@
-import {KTIcon} from '../../../../../../../_metronic/helpers'
+import {KTIcon} from '@/pim/helpers'
 import {useListView} from '../../core/ListViewProvider'
 import {UsersListFilter} from './UsersListFilter'
 

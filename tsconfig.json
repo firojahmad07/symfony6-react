@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": "./public/bundles/ui/",
-    "outDir": "./public/dist",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -18,7 +17,9 @@
     "noEmit": false,
     "jsx": "react-jsx",
     "paths": {
-      "@/*": ["public/bundles/ui/*"]
+      "@/*": ["./public/bundles/ui/*"]
     },
   },
+  "include": ["public/bundles/ui/**/*.ts", "public/bundles/ui/**/*.tsx"],
+  "exclude": ["node_modules"]
 }

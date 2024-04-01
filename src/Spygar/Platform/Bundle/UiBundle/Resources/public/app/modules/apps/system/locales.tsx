@@ -34,23 +34,6 @@ const LocaleList = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="card-header align-items-center py-5 gap-2 gap-md-5">
-                        <div className="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
-                            <div className="dataTables_paginate paging_simple_numbers" id="kt_table_users_paginate">
-                                <ul className="pagination">
-                                    <li className="paginate_button page-item previous disabled" id="kt_table_users_previous">
-                                        <a href="#" aria-controls="kt_table_users" data-dt-idx="0" className="page-link">
-                                            <i className="previous"></i>
-                                        </a>
-                                    </li>
-                                    <li className="paginate_button page-item active"><a href="#" aria-controls="kt_table_users" data-dt-idx="1" className="page-link">1</a></li>
-                                    <li className="paginate_button page-item "><a href="#" aria-controls="kt_table_users" data-dt-idx="2" className="page-link">2</a></li>
-                                    <li className="paginate_button page-item "><a href="#" aria-controls="kt_table_users" data-dt-idx="3" className="page-link">3</a></li>
-                                    <li className="paginate_button page-item next" id="kt_table_users_next"><a href="#" aria-controls="kt_table_users" data-dt-idx="4" className="page-link"><i className="next"></i></a></li>
-                                    </ul>
-                            </div>
-                        </div>
-                    </div>
                     <div className="card-body pt-0">
                         <table className="table align-middle table-row-dashed fs-6 gy-5" id="kt_ecommerce_sales_table">
                             <thead>

@@ -12,7 +12,7 @@ const SystemWrapper = () => {
             <Route element={<Outlet />}> <Route path='configuration' element={ <Configuration/> } /> </Route>
             <Route element={<Outlet />}> <Route path='locales' element={ <Locales/> } /> </Route>
             <Route element={<Outlet />}> <Route path='currencies' element={ <Currencies/> } /> </Route>
-            <Route element={<Outlet />}> <Route path='users' element={ <Users/> } /> </Route>
+            {/* <Route element={<Outlet />}> <Route path='users' element={ <Users/> } /> </Route> */}
             <Route element={<Outlet />}> <Route path='roles' element={ <Roles/> } /> </Route>
             <Route index element={<Navigate to='/system/configuration' />} />
         </Routes>

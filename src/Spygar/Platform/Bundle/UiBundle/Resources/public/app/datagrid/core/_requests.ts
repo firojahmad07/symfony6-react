@@ -1,5 +1,5 @@
 import axios, {AxiosResponse} from 'axios'
-import {ID, Response} from '../../../../../../pim/helpers'
+import {ID, Response} from '@/pim/helpers'
 import {User, UsersQueryResponse} from './_models'
 
 const API_URL = "api"

@@ -7,7 +7,6 @@ import {UsersTable} from './table/UsersTable'
 import {UserEditModal} from './user-edit-modal/UserEditModal'
 import {KTCard} from '@/pim/helpers'
 
-
 const UsersList = () => {
   const {itemIdForUpdate} = useListView()
   return (

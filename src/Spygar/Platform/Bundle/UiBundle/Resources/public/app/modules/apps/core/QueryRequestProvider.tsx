@@ -4,7 +4,7 @@ import {
   QueryRequestContextProps,
   initialQueryRequest,
   WithChildren,
-} from '../../../../../../_metronic/helpers'
+} from '@/pim/helpers'
 
 const QueryRequestContext = createContext<QueryRequestContextProps>(initialQueryRequest)
 
