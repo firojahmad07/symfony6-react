@@ -1,4 +1,4 @@
-import {KTIcon} from '@/pim/helpers'
+import {KTIcon} from 'PIM/helpers'
 import {useListView} from '../core/ListViewProvider'
 
 const UserEditModalHeader = () => {

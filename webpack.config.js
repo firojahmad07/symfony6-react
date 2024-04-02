@@ -1,5 +1,4 @@
 const path = require('path');
-// ./public/bundles/ui/index.tsx',
 let entitryFile = '/index.tsx';
 let rootPath = path.resolve(__dirname, './public/bundles/ui/');
 let distPath = path.resolve(__dirname, './public/dist');
@@ -21,7 +20,8 @@ const projectConfiguration = {
 	},
 	resolve: {
 		alias: {
-			'@': rootPath,
+			APP: path.resolve(__dirname, './public/bundles/ui/app/'),
+			PIM: path.resolve(__dirname, './public/bundles/ui/pim/'),
 		},
 		extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss'],
 		// fallback: {

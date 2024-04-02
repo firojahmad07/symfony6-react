@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import {FC, useEffect} from 'react'
 import {useMutation, useQueryClient} from 'react-query'
-import {MenuComponent} from '@/_metronic/assets/ts/components'
-import {ID, KTIcon, QUERIES} from '@/pim/helpers'
+import {MenuComponent} from 'PIM/assets/ts/components'
+import {ID, KTIcon, QUERIES} from 'PIM/helpers'
 import {useListView} from '../../core/ListViewProvider'
 import {useQueryResponse} from '../../core/QueryResponseProvider'
 import {deleteUser} from '../../core/_requests'

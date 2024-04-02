@@ -1,6 +1,6 @@
 
 import React from 'react'
-import {useListView} from '../../core/ListViewProvider'
+import {useListView} from 'APP/datagrid/core/ListViewProvider'
 import {UsersListToolbar} from './UserListToolbar'
 import {UsersListGrouping} from './MassActions'
 import {SearchComponent} from './SearchComponent'

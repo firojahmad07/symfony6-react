@@ -1,7 +1,7 @@
 import {FC, useState} from 'react'
 import * as Yup from 'yup'
 import {useFormik} from 'formik'
-import {isNotEmpty, toAbsoluteUrl} from '../../../../../../pim/helpers'
+import {isNotEmpty, toAbsoluteUrl} from 'PIM/helpers'
 import {initialUser, User} from '../core/_models'
 import clsx from 'clsx'
 import {useListView} from '../core/ListViewProvider'

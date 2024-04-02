@@ -8,7 +8,7 @@ import {
   ListViewContextProps,
   groupingOnSelectAll,
   WithChildren,
-} from '../../../../../../pim/helpers'
+} from 'PIM/helpers'
 import {useQueryResponse, useQueryResponseData} from './QueryResponseProvider'
 
 const ListViewContext = createContext<ListViewContextProps>(initialListView)

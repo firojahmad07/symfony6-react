@@ -1,8 +1,8 @@
 import {useEffect, useState} from 'react'
-import {MenuComponent} from '@/_metronic/assets/ts/components'
-import {initialQueryState, KTIcon} from '@/pim/helpers'
-import {useQueryRequest} from '../../core/QueryRequestProvider'
-import {useQueryResponse} from '../../core/QueryResponseProvider'
+import {MenuComponent} from 'PIM/assets/ts/components'
+import {initialQueryState, KTIcon} from 'PIM/helpers'
+import {useQueryRequest} from 'APP/datagrid/core/QueryRequestProvider'
+import {useQueryResponse} from 'APP/datagrid/core/QueryResponseProvider'
 
 const UsersListFilter = () => {
   const {updateState} = useQueryRequest()

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {toAbsoluteUrl} from '../../../../../../pim/helpers'
+import {toAbsoluteUrl} from 'PIM/helpers'
 import {IProfileDetails, profileDetailsInitValues as initialValues} from '../SettingsModel'
 import * as Yup from 'yup'
 import {useFormik} from 'formik'

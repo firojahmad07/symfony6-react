@@ -11,6 +11,6 @@ return [
     Spygar\UserManagement\Bundle\UserManagementBundle::class => ['all' => true],
     Spygar\Catalog\Enrichment\Bundle\CatalogEnrichmentBundle::class => ['all' => true],
     Spygar\Platform\Installer\InstallerBundle::class => ['all' => true],
-    Nelmio\CorsBundle\NelmioCorsBundle::class => ['all' => true],
-    ApiPlatform\Symfony\Bundle\ApiPlatformBundle::class => ['all' => true],
+    // Nelmio\CorsBundle\NelmioCorsBundle::class => ['all' => true],
+    // ApiPlatform\Symfony\Bundle\ApiPlatformBundle::class => ['all' => true],
 ];

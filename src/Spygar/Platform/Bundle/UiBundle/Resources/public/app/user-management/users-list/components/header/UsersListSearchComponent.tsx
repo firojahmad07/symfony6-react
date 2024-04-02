@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import {useEffect, useState} from 'react'
-import {initialQueryState, KTIcon, useDebounce} from '@/pim/helpers'
+import {initialQueryState, KTIcon, useDebounce} from 'PIM/helpers'
 import {useQueryRequest} from '../../core/QueryRequestProvider'
 
 const UsersListSearchComponent = () => {

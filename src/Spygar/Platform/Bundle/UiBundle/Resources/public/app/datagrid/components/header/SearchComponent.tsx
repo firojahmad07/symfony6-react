@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react'
-import {initialQueryState, KTIcon, useDebounce} from '@/pim/helpers'
-import {useQueryRequest} from '../../core/QueryRequestProvider'
+import {initialQueryState, KTIcon, useDebounce} from 'PIM/helpers'
+import {useQueryRequest} from 'APP/datagrid/core/QueryRequestProvider'
 
 const SearchComponent = () => {
   const {updateState} = useQueryRequest()
@@ -24,7 +24,6 @@ const SearchComponent = () => {
 
   return (
     <div className='card-title'>
-      {/* begin::Search */}
       <div className='d-flex align-items-center position-relative my-1'>
         <KTIcon iconName='magnifier' className='fs-1 position-absolute ms-6' />
         <input
@@ -36,7 +35,6 @@ const SearchComponent = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
-      {/* end::Search */}
     </div>
   )
 }

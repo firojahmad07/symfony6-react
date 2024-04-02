@@ -4,7 +4,7 @@ import {
   QueryRequestContextProps,
   initialQueryRequest,
   WithChildren,
-} from '../../../../../../pim/helpers'
+} from 'PIM/helpers'
 
 const QueryRequestContext = createContext<QueryRequestContextProps>(initialQueryRequest)
 

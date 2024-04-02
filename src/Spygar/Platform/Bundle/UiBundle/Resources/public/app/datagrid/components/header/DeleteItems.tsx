@@ -1,8 +1,8 @@
 import React, {useQueryClient, useMutation} from 'react-query'
-import {QUERIES} from '@/pim/helpers'
-import {useListView} from '../../core/ListViewProvider'
-import {useQueryResponse} from '../../core/QueryResponseProvider'
-import {deleteSelectedUsers} from '../../core/_requests'
+import {QUERIES} from 'PIM/helpers'
+import {useListView} from 'APP/datagrid/core/ListViewProvider'
+import {useQueryResponse} from 'APP/datagrid/core/QueryResponseProvider'
+import {deleteSelectedUsers} from 'APP/datagrid/core/_requests'
 
 const DeleteItems = () => {
   const {selected, clearSelected} = useListView()

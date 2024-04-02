@@ -1,13 +1,13 @@
 import {FC, useState} from 'react'
 import * as Yup from 'yup'
 import {useFormik} from 'formik'
-import {isNotEmpty, toAbsoluteUrl} from '@/pim/helpers'
-import {initialUser, User} from '@/core/_models'
+import {isNotEmpty, toAbsoluteUrl} from 'PIM/helpers'
+import {initialUser, User} from 'APP/datagrid/core/_models'
 import clsx from 'clsx'
-import {useListView} from '@/core/ListViewProvider'
-import {UsersListLoading} from '@/components/loading/UsersListLoading'
-import {createUser, updateUser} from '@/core/_requests'
-import {useQueryResponse} from '@/core/QueryResponseProvider'
+import {useListView} from 'APP/datagrid/core/ListViewProvider'
+import {UsersListLoading} from 'APP/datagrid/components/loading/UsersListLoading'
+import {createUser, updateUser} from 'APP/datagrid/core/_requests'
+import {useQueryResponse} from 'APP/datagrid/core/QueryResponseProvider'
 
 type Props = {
   isUserLoading: boolean

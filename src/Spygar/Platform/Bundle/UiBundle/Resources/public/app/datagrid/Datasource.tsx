@@ -5,7 +5,7 @@ import {QueryResponseProvider} from './core/QueryResponseProvider'
 import {DatagridHeader} from '../datagrid/components/header/DatagridHeader'
 import {UsersTable} from './table/UsersTable'
 import {UserEditModal} from './user-edit-modal/UserEditModal'
-import {KTCard} from '@/pim/helpers'
+import {KTCard} from 'PIM/helpers'
 
 const UsersList = () => {
   const {itemIdForUpdate} = useListView()

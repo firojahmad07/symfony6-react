@@ -1,6 +1,6 @@
 import {useQuery} from 'react-query'
 import {UserEditModalForm} from './UserEditModalForm'
-import {isNotEmpty, QUERIES} from '../../../../../../pim/helpers'
+import {isNotEmpty, QUERIES} from 'PIM/helpers'
 import {useListView} from '../core/ListViewProvider'
 import {getUserById} from '../core/_requests'
 

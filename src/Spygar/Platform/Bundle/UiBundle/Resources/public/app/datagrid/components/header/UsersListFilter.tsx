@@ -1,7 +1,8 @@
-import React, {useEffect, useState, useQueryResponse},  from 'react'
-import {MenuComponent} from '@/pim/assets/ts/components'
-import {initialQueryState, KTIcon} from '@/pim/helpers'
-import {useQueryRequest} from '@/app/datagrid/core/QueryRequestProvider'
+import React, {useEffect, useState} from 'react'
+import {MenuComponent} from 'PIM/assets/ts/components'
+import {initialQueryState, KTIcon} from 'PIM/helpers'
+import {useQueryRequest} from 'APP/datagrid/core/QueryRequestProvider'
+import {useQueryResponse} from 'APP/datagrid/core/QueryResponseProvider'
 
 const UsersListFilter = () => {
   const {updateState} = useQueryRequest()

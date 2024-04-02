@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, {useState} from 'react'
-import {KTIcon} from '../../../../../../pim/helpers'
+import {KTIcon} from 'PIM/helpers'
 import * as Yup from 'yup'
 import {useFormik} from 'formik'
 import {IUpdateEmail, IUpdatePassword, updateEmail, updatePassword} from '../SettingsModel'
